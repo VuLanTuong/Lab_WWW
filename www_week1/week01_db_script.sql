@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `account` (
   `password` varchar(50) NOT NULL,
   `email` varchar(50) DEFAULT NULL,
   `phone` varchar(50) DEFAULT NULL,
-  `status` tinyint(4) NOT NULL,
+ `status` enum('1','0','-1') NOT NULL,
   PRIMARY KEY (`account_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `account` (
 CREATE TABLE IF NOT EXISTS `grant_access` (
   `role_id` varchar(50) NOT NULL,
   `account_id` varchar(50) NOT NULL,
-  `is_grant` enum('1','0','-1') NOT NULL,
+  `is_grant` enum('1','0') NOT NULL,
   `note` varchar(250) DEFAULT '',
   PRIMARY KEY (`role_id`,`account_id`),
   KEY `account_grant` (`account_id`),
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `role` (
   `role_id` varchar(50) NOT NULL,
   `role_name` varchar(50) NOT NULL,
   `description` varchar(50) DEFAULT NULL,
-  `status` tinyint(4) NOT NULL,
+  `status` enum('1','0','-1') NOT NULL,
   PRIMARY KEY (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
