@@ -14,9 +14,9 @@
 Hello World From Register Page
 <form method="post" action="/Gradle___com_example___tuan1_1_0_SNAPSHOT_war/account/register">
     <label for="username">Username</label>
-    <input type="text" name="username" id="username">
+    <input type="text" name="username" id="username" placeholder="lala">
     <label for="password">Password</label>
-    <input type="password" name="password" id="password">
+    <input type="password" name="password" id="password" placeholder="123">
     <button type="submit">Login</button>
 </form>
 </body>

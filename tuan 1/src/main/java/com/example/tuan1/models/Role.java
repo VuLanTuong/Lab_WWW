@@ -8,4 +8,15 @@ public class Role {
 
     private Status status;
 
+    public Role(){
+
+    }
+
+    public Role(String role_id, String role_name, String description, Status status) {
+        this.role_id = role_id;
+        this.role_name = role_name;
+        this.description = description;
+        this.status = status;
+    }
+
 }

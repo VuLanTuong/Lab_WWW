@@ -12,6 +12,10 @@ public class Account {
     private Status status;
 
 
+    public Account(){
+
+    }
+
     public Account(String account_id, String full_name, String password, String email, String phone, Status status) {
         this.account_id = account_id;
         this.full_name = full_name;
