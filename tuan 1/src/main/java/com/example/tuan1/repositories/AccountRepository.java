@@ -5,6 +5,8 @@ import com.example.tuan1.models.Account;
 import com.example.tuan1.models.Status;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class AccountRepository {
@@ -29,7 +31,7 @@ public class AccountRepository {
         ps.setString(3, account.getPassword());
         ps.setString(4, account.getEmail());
         ps.setString(5, account.getPhone());
-        ps.setInt(6, account.getStatus().getStatus());
+        ps.setInt(6, Status.convertEnumToInt(account.getStatus()));
         ps.executeUpdate();
         return true;
     }
@@ -76,20 +78,11 @@ public class AccountRepository {
         ResultSet resultSet = ps.executeQuery();
         if (resultSet.next()) {
             int statusIndex = resultSet.getInt(6);
-            Status status = Status.DEACTIVE;
-
-            if (statusIndex == 1) {
-                status = Status.ACTIVE;
-            }
-
-            if (statusIndex == -1) {
-                status = Status.REMOVE;
-            }
             return new Account(resultSet.getString(1),
                     resultSet.getString(2),
                     resultSet.getString(3), resultSet.getString(4),
                     resultSet.getString(5),
-                    status
+                    Status.convertIntToEnum(resultSet.getInt(6))
             );
         }
 
@@ -116,6 +109,27 @@ public class AccountRepository {
 
         }
         return false;
+    }
+
+
+    public List<Account> getAllAccount() throws SQLException {
+
+        List<Account> accountList = new ArrayList<>();
+        String sql = "Select * from account";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ResultSet resultSet = ps.executeQuery();
+        while (resultSet.next()) {
+           Account account = new Account(resultSet.getString(1),
+                   resultSet.getString(2),
+                   resultSet.getString(3), resultSet.getString(4),
+                   resultSet.getString(5),
+                   Status.convertIntToEnum(resultSet.getInt(6))
+
+
+           );
+            accountList.add(account);
+        }
+        return accountList;
     }
 
 

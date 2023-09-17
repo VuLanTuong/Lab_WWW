@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(urlPatterns = {"/menu"})
+@WebServlet(urlPatterns = {"/dashboard"})
 public class ControlServlet extends HttpServlet {
 
     @Override
@@ -37,7 +37,7 @@ public class ControlServlet extends HttpServlet {
         writer.println("<h1>Hello</h1>");
         writer.println("<form>");
         writer.println("<h1>" + "CLick menu " + "</h1>");
-        writer.println("<a href=\"menu.jsp\">Menu</a>");
+        writer.println("<a href=\"dashboard.jsp\">Menu</a>");
         writer.println("</form>");
 //        writer.println();
 

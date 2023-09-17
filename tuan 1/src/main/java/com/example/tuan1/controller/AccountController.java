@@ -15,7 +15,7 @@ import java.sql.SQLException;
 import java.util.Arrays;
 
 @Slf4j
-@WebServlet(name = "accountController")
+@WebServlet(name = "accountController", urlPatterns = "/register")
 public class AccountController extends HttpServlet {
 
     private AccountImpl accountService;
@@ -37,7 +37,7 @@ public class AccountController extends HttpServlet {
 
         log.info("Test: {}", Arrays.toString(pathInfo));
 
-        final String page = pathInfo[2];
+        final String page = pathInfo[1];
 
         if ("register".equals(page)) {
             getServletContext().getRequestDispatcher("/register.jsp").forward(req, resp);
@@ -50,7 +50,7 @@ public class AccountController extends HttpServlet {
 
         log.info("Test: {}", Arrays.toString(pathInfo));
 
-        final String page = pathInfo[2];
+        final String page = pathInfo[1];
 
         if ("register".equals(page)) {
             final String username = req.getParameter("username");
@@ -70,7 +70,7 @@ public class AccountController extends HttpServlet {
 
                     if(admin){
                         log.info("ADMIN");
-                        getServletContext().getRequestDispatcher("/admin.jsp").forward(req, resp);
+                        getServletContext().getRequestDispatcher("/dashboard.jsp").forward(req, resp);
 
                     }
                     else{

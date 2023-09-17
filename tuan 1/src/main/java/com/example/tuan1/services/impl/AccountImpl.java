@@ -7,6 +7,7 @@ import com.example.tuan1.services.AccountService;
 import jakarta.inject.Inject;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class AccountImpl implements AccountService {
 
@@ -31,5 +32,10 @@ public class AccountImpl implements AccountService {
     @Override
     public boolean checkRoleAdmin(Account account) throws SQLException {
         return repository.checkRoleAdmin(account);
+    }
+
+    @Override
+    public List<Account> getAllAccount() throws SQLException {
+        return repository.getAllAccount();
     }
 }

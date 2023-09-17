@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-Hello World From Register Page
-<form method="post">
+Register Page
+<form method="post" action="/register">
     <label for="username">Username</label>
     <input type="text" name="username" id="username" placeholder="lala">
     <label for="password">Password</label>

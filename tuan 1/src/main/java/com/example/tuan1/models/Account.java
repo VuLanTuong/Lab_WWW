@@ -49,7 +49,8 @@ public class Account {
         this.status = status;
     }
 
-    public String getAccount_id() {
+    public String
+    getAccount_id() {
         return account_id;
     }
 
