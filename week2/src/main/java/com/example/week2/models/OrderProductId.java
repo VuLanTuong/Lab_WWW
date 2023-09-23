@@ -1,4 +1,4 @@
-package com.example.week2.model;
+package com.example.week2.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

@@ -1,8 +1,7 @@
 package com.example.week2.repositories;
 
-import com.example.week2.model.Employee;
-import com.example.week2.model.EmployeeStatus;
-import jakarta.inject.Inject;
+import com.example.week2.models.Employee;
+import com.example.week2.models.EmployeeStatus;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.TypedQuery;
@@ -44,6 +43,8 @@ public class EmployeeRepository {
     public List<Employee> getAllEmployee(){
         return entityManager.createQuery("select e from Employee e", Employee.class).getResultList();
     }
+
+
 
 
 }

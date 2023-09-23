@@ -1,6 +1,5 @@
-package com.example.week2.model;
+package com.example.week2.models;
 
-import jakarta.persistence.Embeddable;
 import jakarta.persistence.Table;
 
 @Table

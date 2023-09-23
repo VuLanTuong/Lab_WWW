@@ -1,12 +1,10 @@
 package com.example.week2.services;
 
-import com.example.week2.model.Employee;
-import com.example.week2.model.EmployeeStatus;
+import com.example.week2.models.Employee;
+import com.example.week2.models.EmployeeStatus;
 import com.example.week2.repositories.EmployeeRepository;
-import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Persistence;
-import jakarta.persistence.TypedQuery;
 
 import java.util.List;
 import java.util.Optional;
@@ -54,9 +52,23 @@ public class EmployeeService {
       return employeeRepository.findById(id);
     }
 
-
     public List<Employee> getAllEmp(){
         return employeeRepository.getAllEmployee();
+
+    }
+
+    public void insert(Employee employee){
+         employeeRepository.insertEmployee(employee);
+
+    }
+
+    public void update(Employee employee){
+        employeeRepository.updateEmployee(employee);
+
+    }
+
+    public void setStatus(Employee employee, EmployeeStatus status){
+        employeeRepository.setStatus(employee, status);
 
     }
 

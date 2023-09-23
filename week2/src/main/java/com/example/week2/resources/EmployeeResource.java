@@ -1,12 +1,9 @@
 package com.example.week2.resources;
 
-import com.example.week2.model.Employee;
+import com.example.week2.models.Employee;
+import com.example.week2.models.EmployeeStatus;
 import com.example.week2.services.EmployeeService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;
 import lombok.extern.slf4j.Slf4j;
 
@@ -17,6 +14,8 @@ import java.util.Optional;
 @Slf4j
 public class EmployeeResource {
     private EmployeeService employeeService;
+
+
 
     public EmployeeResource(){
         employeeService = new EmployeeService();
@@ -60,6 +59,37 @@ public class EmployeeResource {
     public Response getTest(){
         return Response.ok().entity("OK").build();
     }
+
+    @POST
+    @Path("/insert")
+    @Produces("application/json")
+    public Response insert(Employee employee){
+        employeeService.insert(employee);
+
+        return Response.ok(employee).build();
+    }
+
+
+    @PUT
+    @Path("/update")
+    @Produces("application/json")
+    public Response update(Employee employee){
+        employeeService.update(employee);
+
+        return Response.ok(employee).build();
+    }
+
+    @POST
+    @Path("/setStatus")
+    @Produces("application/json")
+    public Response setStatus(Employee employee, EmployeeStatus status){
+        employeeService.setStatus(employee, status);
+
+        return Response.ok(employee).build();
+    }
+
+
+
 
 
 }
