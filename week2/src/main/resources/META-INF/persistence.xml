@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="week2">
+<!--        <class>com.example.week2.models.ProductPrice</class>-->
+<!--        <class>com.example.week2.models.Customer</class>-->
+<!--        <class>com.example.week2.models.Employee</class>-->
+<!--        <class>com.example.week2.models.Product</class>-->
+<!--        <class>com.example.week2.models.ProductImage</class>-->
+<!--        <class>com.example.week2.models.ProductStatus</class>-->
+<!--        <class>com.example.week2.models.OrderProductId</class>-->
+<!--        <class>com.example.week2.models.EmployeeStatus</class>-->
+<!--        <class>com.example.week2.models.Order</class>-->
+<!--        <class>com.example.week2.models.OrderDetail</class>-->
+
+        <properties>
+                  <property name="jakarta.persistence.jdbc.driver"
+                            value="org.mariadb.jdbc.Driver" />
+                  <property name="jakarta.persistence.jdbc.dialect"
+                            value="org.hibernate.dialect.MariaDBDialect" />
+<!--            <property name="jakarta.persistence.jdbc.driver"-->
+<!--                      value="com.mysql.cj.jdbc.Driver" />-->
+<!--            <property name="jakarta.persistence.jdbc.dialect"-->
+<!--                      value="org.hibernate.dialect.MySQLDialect" />-->
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mariadb://localhost:3306/week2" />
+            <property name="jakarta.persistence.jdbc.user" value="root" />
+            <property name="jakarta.persistence.jdbc.password"
+                      value="sapassword"/>
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+
+
+        </properties>
+
+
+
+    </persistence-unit>
+</persistence>

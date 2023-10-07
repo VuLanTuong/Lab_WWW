@@ -1,5 +1,5 @@
-<%@ page import="com.example.week2.models.Employee" %>
-<%@ page import="com.example.week2.services.EmployeeService" %>
+<%@ page import="week3.vulantuong.models.Employee" %>
+<%@ page import="week3.vulantuong.services.EmployeeService" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>

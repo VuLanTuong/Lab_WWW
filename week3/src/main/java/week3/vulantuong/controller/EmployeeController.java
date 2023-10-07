@@ -1,4 +1,4 @@
-package com.example.week2.controller;
+package week3.vulantuong.controller;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 
 @Slf4j
-@WebServlet(name = "index", value = "/index")
+@WebServlet("/control")
 public class EmployeeController extends HttpServlet {
 
 
@@ -26,32 +26,27 @@ public class EmployeeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setContentType("text/html");
-        PrintWriter writer = response.getWriter();
-        writer.println("<h1>Hello</h1>");
-        writer.println("<form>");
-        writer.println("<h1>" + "CLick menu " + "</h1>");
-        writer.println("<a href=\"dashboard.jsp\">Menu</a>");
-        writer.println("</form>");
+//        response.setContentType("text/html");
+//        PrintWriter writer = response.getWriter();
+//        writer.println("<h1>Hello</h1>");
+//        writer.println("<form>");
+//        writer.println("<h1>" + "CLick menu " + "</h1>");
+//        writer.println("<a href=\"dashboard.jsp\">Menu</a>");
+//        writer.println("</form>");
 
 //            log.info("RUNINGGGGGGGGGGGG");
 //            getServletContext().getRequestDispatcher("/webapp/listing.jsp").forward(request, response);
 
+                String action = request.getParameter("action");
+
+        switch (action) {
+            case "listing":
+                response.sendRedirect("listing.jsp");
+                break;
+        }
 
 
-
-
-
-        //        String action = req.getParameter("action");
-//
-//        switch (action) {
-//            case "employeeList":
-//                resp.sendRedirect("listing.jsp");
-//                break;
-//        }
-
-
-//        getServletContext().getRequestDispatcher("/.jsp").forward(req, resp);
+       // getServletContext().getRequestDispatcher("/.jsp").forward(req, resp);
 
     }
 
