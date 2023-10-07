@@ -12,7 +12,7 @@
     EmployeeService employeeService = new EmployeeService();
             List<Employee> employeeList = employeeService.getAllEmp();
 %>
-<form action="employee?action=employeeList" method="get">
+<form action="employeeListing" method="get">
 <table style="border-collapse: collapse;">
     <thead>
     <tr>
