@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Job</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select,
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        select {
+            height: 40px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        .checkbox-group {
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group label {
+            margin-left: 5px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-row label {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .form-row input[type="text"],
+        .form-row select {
+            flex: 2;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" th:action="@{/save}" th:object="${jobRequest}">
+        <h1>Insert Job</h1>
+        <label for="company">Company</label>
+        <select id="company" name="company" th:field="*{comName}">
+            <option th:each="company : ${companyList}" th:value="${company.compName}" th:text="${company.compName}" name="compName">
+            </option>
+        </select>
+        <br><br>
+        <label for="jobname">Job name</label>
+        <input type="text" id="jobname" name="jobname" placeholder="Job name.." th:field="*{jobName}">
+        <br><br>
+        <label for="jobdescription">Job description</label>
+        <textarea type="text" id="jobdescription" name="jobdescription" placeholder="Job description.." th:field="*{jobDescription}"></textarea>
+        <br><br>
+
+        <label>Selected Skill</label>
+        <div class="checkbox-group">
+            <div class="form-row"  style="display: flex; flex-direction: row; gap: 15px" th:each="skill : ${skillList}
+">
+                <input type="checkbox" id="skill1"  th:value="${skill.skillName}" th:text="${skill.skillName}" th:field="*{skills}">
+<!--                <label for="skill1" th:each="skill : ${skillList}" th:value="${skill.skillName}" th:text="${skill.skillName} "></label>-->
+               <select style="width: 100px" th:field="*{skillLevel}">
+                   <option value=""></option>
+                   <option value="MASTER" th:text="MASTER"></option>
+                   <option value="PROFESSIONAL" th:text="PROFESSIONAL"></option>
+                   <option value="ADVANCED" th:text="ADVANCED"></option>
+                   <option value="INTERMEDIATE" th:text="INTERMEDIATE"></option>
+                   <option value="BEGINNER" th:text="BEGINNER"></option>
+
+               </select>
+
+
+            </div>
+        </div>
+        <br><br>
+        <br>
+        <button id="btn" class="submit-button" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
