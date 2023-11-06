@@ -1,5 +1,6 @@
 package com.example.week7_vulantuong.services;
 
+import com.example.week7_vulantuong.enums.ProductStatus;
 import com.example.week7_vulantuong.models.Product;
 import com.example.week7_vulantuong.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,4 +28,11 @@ public class ProductService {
     public Optional<Product> findById(Long id){
         return productRepository.findById(id);
     }
+
+    public void delete(Product product){
+        product.setStatus(ProductStatus.IN_ACTIVE);
+        productRepository.save(product);
+    }
+
+
 }

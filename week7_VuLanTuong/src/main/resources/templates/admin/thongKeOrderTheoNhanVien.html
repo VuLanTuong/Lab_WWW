@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post">
+    Employee Id <input name="id" type="text">
+    <br>
+
+    <button type="submit">Submit</button>
+
+    <h1>List Order</h1>
+    <table>
+        <tr>
+            <th>Order id</th>
+            <th>Order date</th>
+            <th>Customer name</th>
+            <th>Customer id</th>
+            <th>Employee name</th>
+            <th>Employee id</th>
+            <th>Order detail</th>
+
+        </tr>
+        <tr th:each="productPriceMapping : ${orders}">
+            <td th:text="${productPriceMapping.getOrder_id()}"></td>
+            <td th:text="${productPriceMapping.getOrderDate()}"></td>
+            <td th:text="${productPriceMapping.getCustomer().getName()}"></td>
+            <td th:text="${productPriceMapping.getCustomer().getId()}"></td>
+            <td th:text="${productPriceMapping.getEmployee().getFullname()}"></td>
+            <td th:text="${productPriceMapping.getEmployee().getId()}"></td>
+            <td th:text="${productPriceMapping.getOrderDetails()}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

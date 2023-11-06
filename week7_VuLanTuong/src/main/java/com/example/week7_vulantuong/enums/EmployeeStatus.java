@@ -1,8 +1,9 @@
 package com.example.week7_vulantuong.enums;
 
 public enum EmployeeStatus {
-    ACTIVE(1),
     IN_ACTIVE(0),
+    ACTIVE(1),
+
     TERMINATED(-1);
     private int value;
 

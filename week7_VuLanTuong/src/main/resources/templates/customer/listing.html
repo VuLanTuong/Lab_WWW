@@ -54,7 +54,7 @@
     </tr>
     <tr th:each="productPriceMapping : ${products}">
         <td th:text="${productPriceMapping.getName()}"></td>
-        <td th:text="${productPriceMapping.getDescription()}"></td>
+        <td style="width: 30%" th:text="${productPriceMapping.getDescription()}"></td>
         <td th:text="${productPriceMapping.getManufacturer()}"></td>
         <td th:text="${productPriceMapping.getUnit()}"></td>
         <td th:text="${productPriceMapping.getPrice()}"></td>

@@ -12,6 +12,8 @@
 </head>
 <body>
 
+
+
     <h2>Username</h2>
     <p id="username"><%= request.getAttribute("username") %></p>
     <h2>Full name</h2>

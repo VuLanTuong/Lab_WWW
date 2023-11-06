@@ -1,4 +1,4 @@
-`<%--
+<%--
   Created by IntelliJ IDEA.
   User: 1805v
   Date: 9/17/2023
@@ -28,7 +28,6 @@
         <br>
         <br>
         <br>
-
         <button type="submit">Insert user</button>
     </form>
 

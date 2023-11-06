@@ -78,12 +78,16 @@ public class OrderDetail {
 
     @Override
     public String toString() {
-        return "OrderDetail{" +
-                ", quantity=" + quantity +
-                ", price=" + price +
-                ", note='" + note + '\'' +
-                ", order=" + order +
-                ", product=" + product +
+        return "\nOrderDetail{" +
+                "\n" +
+                "  quantity=" + quantity +
+                ",\n" +
+                "  price=" + price +
+                ",\n" +
+                "  note='" + note + '\'' +
+                ",\n" +
+                "  product=" + product +
+                "\n" +
                 '}';
     }
 }

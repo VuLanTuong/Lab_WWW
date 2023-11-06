@@ -1,43 +1,97 @@
-<%@ page import="com.example.tuan1.models.Account" %>
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: 1805v
-  Date: 9/17/2023
-  Time: 2:08 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.example.gk4.models.Account" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.example.gk4.services.AccountServices" %>
+<%@ page import="com.example.gk4.models.Status" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 6px 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        select {
+            width: 100%;
+            padding: 6px 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<form method="get" action="UserController?action=update">
-    <table style="border-collapse: collapse;">
-        <thead>
+<%
+    Account account = new Account();
+    AccountServices accountServices = new AccountServices();
+    account = accountServices.findById(request.getParameter("id"));
+%>
+<form method="post">
+    <table>
         <tr>
-            <th style="border: 1px solid black;">Username</th>
-            <th style="border: 1px solid black;">Fullname</th>
-            <th style="border: 1px solid black;">Password</th>
-            <th style="border: 1px solid black;">Email</th>
-            <th style="border: 1px solid black;">Phone</th>
-            <th style="border: 1px solid black;">Status</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>Status</th>
         </tr>
-        </thead>
-        <tbody>
-        <% for (Account a : (List<Account>) request.getAttribute("accountList")) { %>
-        <tr>
-            <td style="border: 1px solid black;"><%= a.getAccount_id() %></td>
-            <td style="border: 1px solid black;"><%= a.getFull_name() %></td>
-            <td style="border: 1px solid black;"><%= a.getPassword() %></td>
-            <td style="border: 1px solid black;"><%= a.getEmail() %></td>
-            <td style="border: 1px solid black;"><%= a.getPhone() %></td>
-            <td style="border: 1px solid black;"><%= a.getStatus() %></td>
-        </tr>
-        <% } %>
-        </tbody>
-    </table>
-</form>
 
+        <tr>
+            <td>Full name<input value="<%= account.getFullName()%>" type="text" name="fullname"></td>
+            <td>Email<input value="<%= account.getEmail()%>" type="text" name="email"></td>
+            <td>Phone<input value="<%= account.getPhone()%>" type="text" name="phone"></td>
+            <td>Password<input value="<%= account.getPassword()%>" type="text" name="password"></td>
+            <td>
+                <select id="status" name="status">
+                    <%
+                        if (Status.values() != null) {
+                            for (Status status : Status.values()) {
+                    %>
+                    <option <%= (status == account.getStatus()) ? "selected" : "" %>><%= status %></option>
+                    <% } } %>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button type="submit">UPDATE</button>
+</form>
 </body>
 </html>

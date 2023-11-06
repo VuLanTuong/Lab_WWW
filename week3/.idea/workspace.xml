@@ -5,46 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="360af9b7-fdec-42ac-9859-574b7e598a94" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../week2/src/main/resources/webapp/dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/RootApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/db/Connection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/EmployeeStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/EmployeeStatusConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/OrderDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/OrderProductId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/ProductImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/ProductPrice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/ProductStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/models/ProductStatusConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/repositories/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/resources/EmployeeResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/resources/HelloResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/week3/vulantuong/services/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/listing.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week2/src/main/java/com/example/week2/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week2/src/main/java/com/example/week2/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week2/src/main/resources/webapp/employeeListing.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../week2/src/main/resources/webapp/listing.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../week2/src/main/resources/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../week2/src/main/resources/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/controller/ControlServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/controller/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/convert/IsGrantConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/convert/StatusConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/db/Connection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/db/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/db/TestMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/models/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/models/GrantAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/models/IsGrant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/models/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/models/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/repositories/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/repositories/GrantAccessRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/repositories/LogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/repositories/RoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/gk4/services/AccountServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/find-role.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/report1.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/controller/AccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/controller/ControlServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/models/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/models/GrantAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/models/IsGrant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/models/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/models/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/repositories/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/java/com/example/tuan1/services/impl/AccountImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/information.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/insert.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/logged.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tuan 1/src/src/main/webapp/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/repositories/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/repositories/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/services/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/services/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/admin/listAdmin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/admin/thongKe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/admin/thongKeOrderTheoNgay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/admin/thongKeOrderTheoNhanVien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/admin/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../tuan 1/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/controller/AccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/controller/ControlServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/models/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/models/GrantAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/models/IsGrant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/models/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/models/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/repositories/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/services/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/java/com/example/tuan1/services/impl/AccountImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/webapp/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/webapp/information.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/information.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/webapp/insert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/insert.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tuan 1/src/main/webapp/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../tuan 1/src/main/webapp/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/enums/EmployeeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/enums/EmployeeStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/models/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/models/OrderDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/java/com/example/week7_vulantuong/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/customer/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/customer/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/customer/listing.html" beforeDir="false" afterPath="$PROJECT_DIR$/../week7_VuLanTuong/src/main/resources/templates/customer/listing.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +149,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/HK1_Nam4/WWW/Lab_WWW/week3",
+    "last_opened_file_path": "C:/HK1_Nam4/WWW/Lab_WWW/week7_VuLanTuong",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -168,6 +212,7 @@
       <workItem from="1695895509466" duration="188000" />
       <workItem from="1695895712530" duration="1857000" />
       <workItem from="1695897617913" duration="739000" />
+      <workItem from="1699261372081" duration="303000" />
     </task>
     <servers />
   </component>

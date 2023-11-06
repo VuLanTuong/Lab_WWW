@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,7 +22,6 @@
       padding: 10px;
       text-align: left;
       border-bottom: 1px solid #ddd;
-
     }
 
     th {
@@ -43,9 +42,8 @@
     }
   </style>
 </head>
-
 <body>
-<h1>CART</h1>
+<h1>List Product</h1>
 <table>
   <tr>
     <th>Product name</th>
@@ -53,27 +51,18 @@
     <th>Manufacturer</th>
     <th>Unit</th>
     <th>Price</th>
-    <th>Quantity</th>
+    <th><a href="#">Insert Product</a> </th>
+    <th><a th:href="@{/admin/thongKeTheoNgay}">Thong Ke Theo Ngay</a></th>
+    <th><a th:href="@{/admin/thongKeTheoNhanVien}">Thong Ke Theo Nhan Vien</a></th>
   </tr>
-  <tr>
+  <tr th:each="productPriceMapping : ${products}">
     <td th:text="${productPriceMapping.getName()}"></td>
     <td style="width: 30%" th:text="${productPriceMapping.getDescription()}"></td>
     <td th:text="${productPriceMapping.getManufacturer()}"></td>
     <td th:text="${productPriceMapping.getUnit()}"></td>
     <td th:text="${productPriceMapping.getPrice()}"></td>
-    <td><input name="quantity" value="1" type="number"></td>
-    <td><form method="post" th:action="">
-      <button type="submit">
-        Payment
-      </button>
-
-    </form>
-    </td>
+    <td><a th:href="@{/admin/update(id=${productPriceMapping.product_id})}">Update Product</a></td>
   </tr>
-
 </table>
-<h3>Total:</h3>
-
-
 </body>
 </html>

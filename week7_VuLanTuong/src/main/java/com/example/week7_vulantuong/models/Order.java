@@ -84,7 +84,6 @@ public class Order {
                 ", orderDate=" + orderDate +
                 ", employee=" + employee +
                 ", customer=" + customer +
-                ", orderDetails=" + orderDetails +
                 '}';
     }
 }
