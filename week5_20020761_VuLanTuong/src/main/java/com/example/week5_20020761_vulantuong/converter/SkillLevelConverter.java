@@ -1,4 +1,4 @@
-package com.example.week5_20020761_vulantuong;
+package com.example.week5_20020761_vulantuong.converter;
 
 import jakarta.persistence.AttributeConverter;
 
