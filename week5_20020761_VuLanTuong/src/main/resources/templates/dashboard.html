@@ -34,19 +34,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a id="homepage" class="nav-link" href="dashboard.html">Home <span
+                    <a id="homepage" class="nav-link" href="@{/homepage}">Home <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a id="listJob" class="nav-link" href="listJob.html">Find a job</a>
+                    <a id="listJob" class="nav-link" th:href="@{/listJob}">Find a job</a>
                 </li>
 
                 <li class="nav-item">
-                    <a id="insert" class="nav-link disabled" href="insertJob.html">Insert Job</a>
+                    <a id="insert" class="nav-link disabled" th:href="@{/insertJob}">Insert Job</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">My profile</a>
                 </li>
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -54,40 +55,40 @@
             </form>
         </div>
     </nav>
-    <script>
-        // Get the "Tag A" element
-        var tagA = document.getElementById('insert');
-        var tagB = document.getElementById('homepage');
-        var tagC = document.getElementById('listJob');
+<!--    <script>-->
+<!--        // Get the "Tag A" element-->
+<!--        var tagA = document.getElementById('insert');-->
+<!--        var tagB = document.getElementById('homepage');-->
+<!--        var tagC = document.getElementById('listJob');-->
 
 
-        // Add a click event listener
-        tagA.addEventListener('click', function (event) {
-            // Prevent the default behavior of the link
-            event.preventDefault();
+<!--        // Add a click event listener-->
+<!--        tagA.addEventListener('click', function (event) {-->
+<!--            // Prevent the default behavior of the link-->
+<!--            event.preventDefault();-->
 
-            // Redirect the browser to the specified URL
-            window.location.href = "http://localhost:8080/insertJob";
-        });
+<!--            // Redirect the browser to the specified URL-->
+<!--            window.location.href = "http://localhost:8080/insertJob";-->
+<!--        });-->
 
-        tagB.addEventListener('click', function (event) {
-            // Prevent the default behavior of the link
-            event.preventDefault();
+<!--        tagB.addEventListener('click', function (event) {-->
+<!--            // Prevent the default behavior of the link-->
+<!--            event.preventDefault();-->
 
-            // Redirect the browser to the specified URL
-            window.location.href = "http://localhost:8080";
-        });
+<!--            // Redirect the browser to the specified URL-->
+<!--            window.location.href = "http://localhost:8080";-->
+<!--        });-->
 
-        tagC.addEventListener('click', function (event) {
-            // Prevent the default behavior of the link
-            event.preventDefault();
+<!--        tagC.addEventListener('click', function (event) {-->
+<!--            // Prevent the default behavior of the link-->
+<!--            event.preventDefault();-->
 
-            // Redirect the browser to the specified URL
-            window.location.href = "http://localhost:8080/listJob";
-        });
+<!--            // Redirect the browser to the specified URL-->
+<!--            window.location.href = "http://localhost:8080/listJob";-->
+<!--        });-->
 
 
-    </script>
+<!--    </script>-->
 </body>
 
 </html>

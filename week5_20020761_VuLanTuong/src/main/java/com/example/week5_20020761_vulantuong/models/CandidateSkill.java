@@ -1,16 +1,17 @@
 package com.example.week5_20020761_vulantuong.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Table
-@Entity
+@Entity @Setter @Getter
 public class CandidateSkill {
 
     @EmbeddedId
     private CandidateSkillId id;
     private String moreInfo;
 
-    @Embedded
     @Enumerated(EnumType.STRING)
     private SkillLevel skillLevel;
 
@@ -20,11 +21,19 @@ public class CandidateSkill {
     private Skill skill;
 
 
-
     @ManyToOne
     @JoinColumn(name = "can_id", insertable = false, updatable = false)
-    private Candidate caniddate;
+    private Candidate candidate;
 
     public CandidateSkill() {
+    }
+
+    @Override
+    public String toString() {
+        return "CandidateSkill{" +
+                ", moreInfo='" + moreInfo + '\'' +
+                ", skillLevel=" + skillLevel +
+                ", skill=" + skill.getSkillName() +
+                '}';
     }
 }

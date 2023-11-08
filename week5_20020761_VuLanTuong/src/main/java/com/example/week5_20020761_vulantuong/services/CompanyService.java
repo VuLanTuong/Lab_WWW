@@ -1,7 +1,6 @@
 package com.example.week5_20020761_vulantuong.services;
 
 import com.example.week5_20020761_vulantuong.models.Company;
-import com.example.week5_20020761_vulantuong.models.Job;
 import com.example.week5_20020761_vulantuong.repositories.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +19,11 @@ public class CompanyService  {
     public Company findByName(String name){
         return companyRepository.findByCompName(name);
     }
+
+    public Optional<Company> findById(long id){
+        return companyRepository.findById(id);
+    }
+
 
 
 }

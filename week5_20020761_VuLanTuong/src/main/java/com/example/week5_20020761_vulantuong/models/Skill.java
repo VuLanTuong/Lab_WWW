@@ -3,6 +3,7 @@ package com.example.week5_20020761_vulantuong.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Objects;
 
@@ -44,4 +45,6 @@ public class Skill {
     public int hashCode() {
         return Objects.hash(skillId);
     }
+
+
 }

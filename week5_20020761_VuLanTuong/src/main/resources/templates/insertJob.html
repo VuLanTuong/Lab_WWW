@@ -85,11 +85,8 @@
 <body>
     <form method="post" th:action="@{/save}" th:object="${jobRequest}">
         <h1>Insert Job</h1>
-        <label for="company">Company</label>
-        <select id="company" name="company" th:field="*{comName}">
-            <option th:each="company : ${companyList}" th:value="${company.compName}" th:text="${company.compName}" name="compName">
-            </option>
-        </select>
+        <label>Company</label>
+        <input disabled type="text" name="company" th:value="${company.getCompName()}"  >
         <br><br>
         <label for="jobname">Job name</label>
         <input type="text" id="jobname" name="jobname" placeholder="Job name.." th:field="*{jobName}">

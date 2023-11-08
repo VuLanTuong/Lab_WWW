@@ -21,4 +21,10 @@ public interface JobRepository extends JpaRepository<Job, Long> {
     @Modifying
     @Query("update Job j set j.skills =: skills where j.jobId = : jobId")
     void updateJobBySkills(List<JobSkill> skills, long jobId);
+
+
+    @Query("""
+        select j from Job j join Company c on j.company = c where c.compId = :id
+""")
+    List<Job> findByCompanyId(long id);
 }

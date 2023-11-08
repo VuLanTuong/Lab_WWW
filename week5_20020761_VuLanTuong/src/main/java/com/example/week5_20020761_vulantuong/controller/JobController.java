@@ -29,30 +29,6 @@ public class JobController {
     private SkillService skillService;
     @Autowired
     private JobService jobService;
-    @GetMapping("/insertJob")
-    public String insertJob(Model model) {
-        List<Company> companies = companyService.getAll();
-        model.addAttribute(companies);
-        List<Skill> skillList = skillService.getAll();
-        model.addAttribute(skillList);
-        JobRequest jobRequest = new JobRequest();
-        model.addAttribute(jobRequest);
-
-
-
-
-
-        return "insertJob";
-    }
-
-    @PostMapping("/save")
-    public String saveNewJob(HttpServletRequest request, HttpServletResponse response,JobRequest jobRequest) {
-
-        jobService.insertJob(jobRequest);
-
-        log.info("{JOBBBBBBBBBB}{}", jobRequest);
-        return "redirect:/insertJob";
-    }
 
 
     @PostMapping("/listJob")
@@ -60,8 +36,11 @@ public class JobController {
         return "listJob";
     }
 
-    @GetMapping("/listJob")
-    public String getJob(){
+    @GetMapping("listJob")
+    public String getJob(Model model){
+        List<Job> jobs = jobService.findAll();
+
+        model.addAttribute("jobs", jobs);
         return "listJob";
     }
 

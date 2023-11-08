@@ -22,7 +22,7 @@ public class Job {
     @JoinColumn(name = "com_id")
     private Company company;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "job")
     private List<JobSkill> skills;
 
     public Job() {

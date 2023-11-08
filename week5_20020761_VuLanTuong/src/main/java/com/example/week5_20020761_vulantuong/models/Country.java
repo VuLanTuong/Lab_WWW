@@ -2,7 +2,6 @@ package com.example.week5_20020761_vulantuong.models;
 
 import jakarta.persistence.Embeddable;
 
-@Embeddable
 public enum Country {
     USA("United States of America"),
     AFGHANISTAN("Afghanistan"),
@@ -207,11 +206,12 @@ public enum Country {
     ZAMBIA("Zambia"),
     ZIMBABWE("Zimbabwe");
 
+    private String value;
+
     Country(String country) {
+        this.value = country;
     }
 
     Country() {
-
     }
-
 }

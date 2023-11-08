@@ -92,5 +92,10 @@ public class JobService {
             job.setSkills(jobSkills);
             jobRepository.saveAndFlush(job);
         }
+
+
+        public List<Job> findByCompany(Long id){
+        return jobRepository.findByCompanyId(id);
+        }
     }
 

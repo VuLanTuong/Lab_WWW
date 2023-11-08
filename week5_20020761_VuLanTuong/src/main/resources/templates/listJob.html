@@ -91,10 +91,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Find a job</a>
                 </li>
-
-                <li class="nav-item">
-                    <a id="insert" class="nav-link disabled" href="insertJob.html">Insert Job</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">My profile</a>
                 </li>
@@ -105,60 +101,26 @@
             </form>
         </div>
     </nav>
-    <div class="main">
-        <div class="job-container">
-            <h1 class="job-title">Job Name 1</h1>
-            <p class="job-description">Job Description 1</p>
-            <p class="job-company">Company: Company 1</p>
-            <p class="job-skills">Skills:
-            <div class="skills">
+    <div>
+        <table>
+            <tr>
+                <th>Job Name</th>
+                <th>Job Description</th>
+                <th>Company</th>
+                <th>Skill</th>
+            </tr>
+            <tr th:each="job : ${jobs}">
+                <td th:text="${job.getJobName()}"></td>
+                <td th:text="${job.getJobDescription()}"></td>
+                <td th:text="${job.getCompany().getCompName()}"></td>
+                <td th:text="${job.getSkills()}"></td>
+            </tr>
+        </table>
 
-
-                <div>
-                    <span class="job-skill">Skill 1</span>
-                    <span>Skill level</span>
-                </div>
-
-                <div>
-                    <span class="job-skill">Skill 2</span>
-                    <span>Skill level</span>
-                </div>
-                <div class="skill">
-                    <span class="job-skill">Skill 3</span>
-                    <span>Skill level</span>
-                </div>
-
-            </div>
-            </p>
-        </div>
     </div>
 
 
-    <script>
-        // Get the "Tag A" element
-        var tagA = document.getElementById('insert');
-        var tagB = document.getElementById('homepage');
 
-
-        // Add a click event listener
-        tagA.addEventListener('click', function (event) {
-            // Prevent the default behavior of the link
-            event.preventDefault();
-
-            // Redirect the browser to the specified URL
-            window.location.href = "http://localhost:8080/insertJob";
-        });
-
-        tagB.addEventListener('click', function (event) {
-            // Prevent the default behavior of the link
-            event.preventDefault();
-
-            // Redirect the browser to the specified URL
-            window.location.href = "http://localhost:8080";
-        });
-
-
-    </script>
 </body>
 
 
