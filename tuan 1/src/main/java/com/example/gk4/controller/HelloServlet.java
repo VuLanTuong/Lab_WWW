@@ -128,6 +128,13 @@ public class HelloServlet extends HttpServlet {
 //        List<GrantAccess> temp = account.getGrantAccesses();
 //        temp.add(grantAccess);
 //        account.setGrantAccesses(temp);
+        GrantAccess grantAccess = grantAccessRepository.findById(account.getId());
+        Role role = roleRepository.findByName(roleName);
+        grantAccess.setRole(role);
+
+        List<GrantAccess> list = account.getGrantAccesses();
+        list.add(grantAccess);
+        account.setGrantAccesses(list);
         return account;
     }
 

@@ -27,6 +27,12 @@
         Phone <input type="number" name="phone">
         <br>
         <br>
+        Role
+            <select name="role">
+                <option>customer</option>
+                <option>admin</option>
+            </select>
+
         <br>
 
         <button type="submit">Insert user</button>

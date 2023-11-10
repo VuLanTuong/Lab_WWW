@@ -2,6 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="com.example.gk4.services.AccountServices" %>
 <%@ page import="com.example.gk4.models.Status" %>
+<%@ page import="com.example.gk4.models.Role" %>
+<%@ page import="com.example.gk4.repositories.GrantAccessRepository" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -72,6 +74,7 @@
             <th>Phone</th>
             <th>Password</th>
             <th>Status</th>
+            <th>Role</th>
         </tr>
 
         <tr>
@@ -87,6 +90,16 @@
                     %>
                     <option <%= (status == account.getStatus()) ? "selected" : "" %>><%= status %></option>
                     <% } } %>
+                </select>
+            </td>
+            <%
+                GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
+                Role role = grantAccessRepository.findById(account.getId()).getRole();
+            %>
+            <td>
+                <select name="role">
+                    <option>customer</option>
+                    <option>admin</option>
                 </select>
             </td>
         </tr>

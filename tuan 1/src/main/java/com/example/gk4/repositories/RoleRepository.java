@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class RoleRepository {
 
     private SessionFactory sessionFactory;
@@ -35,6 +37,27 @@ public class RoleRepository {
         }
         return null;
     }
+
+//    public Role findByAccountId(String id){
+//        Transaction transaction = null;
+//        try (Session session = sessionFactory.openSession()) {
+//            transaction = session.beginTransaction();
+//            List<Role> role = session.createQuery("select r from Role r join GrantAccess g on g = r.grantAccesses join Account a on a = g.account\n" +
+//                            "where a.id = :id", Role.class)
+//                    .setParameter("id", id).getResultList();
+//            session.close();
+//            transaction.commit();
+//            return role;
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            if (transaction != null) {
+//                transaction.rollback();
+//            }
+//        }
+//        return null;
+//
+//    }
 }
 
 

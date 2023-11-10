@@ -85,9 +85,10 @@ public class CustomerController {
 
         if(product.isPresent()){
             model.addAttribute("productPriceMapping", productPriceMapping);
+            return "customer/cart";
         }
 
-        return "customer/cart";
+        return "customer/listing";
     }
 
 
