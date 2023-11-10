@@ -1,7 +1,8 @@
 package com.example.week2.repositories;
 
+import com.example.week2.enums.EmployeeStatus;
 import com.example.week2.models.Employee;
-import com.example.week2.models.EmployeeStatus;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.TypedQuery;

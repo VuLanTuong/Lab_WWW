@@ -1,46 +1,80 @@
 package com.example.week2.models;
 
+import com.example.week2.enums.ProductStatus;
+import com.example.week2.pks.ProductPricePK;
 import jakarta.persistence.*;
 
-import java.util.Date;
-import java.util.Objects;
+
+import java.time.LocalDateTime;
 
 @Entity
-@Table
+@Table(name = "product_price")
+@IdClass(ProductPricePK.class)
 public class ProductPrice {
-
-    private Date price_date_time;
-
     @Id
-    @ManyToOne
-    @JoinColumn(name = "productId")
+    @JoinColumn(name = "product_id")
+    @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
-
-    private long price;
+    @Id
+    @Column(name = "price_date_time")
+    private LocalDateTime price_date_time;
+    @Column(name = "price", nullable = false)
+    private double price;
+    @Column(name = "note")
     private String note;
 
-
-
-    public ProductPrice(){
-
+    public ProductPrice() {
     }
 
-    public ProductPrice(Date price_date_time, long price, String note) {
+    public ProductPrice(Product product, LocalDateTime price_date_time, double price, String note) {
+        this.product = product;
         this.price_date_time = price_date_time;
         this.price = price;
         this.note = note;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ProductPrice)) return false;
-        ProductPrice that = (ProductPrice) o;
-        return price == that.price && Objects.equals(price_date_time, that.price_date_time) && Objects.equals(product, that.product) && Objects.equals(note, that.note);
+    public ProductPrice(String s, String paragraph, String piece, String manufacturer, ProductStatus productStatus) {
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public LocalDateTime getPrice_date_time() {
+        return price_date_time;
+    }
+
+    public void setPrice_date_time(LocalDateTime price_date_time) {
+        this.price_date_time = price_date_time;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(price_date_time, product, price, note);
+    public String toString() {
+        return "ProductPrice{" +
+                "product=" + product +
+                ", price_date_time=" + price_date_time +
+                ", price=" + price +
+                ", note='" + note + '\'' +
+                '}';
     }
 }

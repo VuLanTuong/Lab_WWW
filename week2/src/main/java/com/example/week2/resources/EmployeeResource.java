@@ -1,7 +1,7 @@
 package com.example.week2.resources;
 
+import com.example.week2.enums.EmployeeStatus;
 import com.example.week2.models.Employee;
-import com.example.week2.models.EmployeeStatus;
 import com.example.week2.services.EmployeeService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Response;

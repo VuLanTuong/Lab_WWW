@@ -1,57 +1,140 @@
 package com.example.week2.models;
 
+import com.example.week2.enums.ProductStatus;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-
 
 @Entity
-@Table(name = "products")
+@Table(name = "product")
+@NamedQueries(value = {
+        @NamedQuery(name = "Product.findAll", query = "select p from Product p where p.status = ?1"),
+        @NamedQuery(name = "Product.findById", query = "select p from Product p where p.product_id = ?1")
+        //,...1
+})
 public class Product {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long productId;
+    @Column(name = "product_id")
+    private long product_id;
+    @Column(name = "name", length = 150, nullable = false)
     private String name;
-    private String description;
-    private String unit;
-    private String manufacturer_name;
 
-    @Convert(converter = ProductStatusConverter.class)
+    @Lob
+    @Column(name = "description",  columnDefinition = "text", nullable = false)
+    private String description;
+    @Column(name = "unit", length = 25, nullable = false)
+    private String unit;
+    @Column(name = "manufacturer_name", length = 100, nullable = false)
+    private String manufacturer;
+
+    @Enumerated(EnumType.ORDINAL)
+    @Column(name = "status")
     private ProductStatus status;
 
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<ProductImage> productImageList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "product")
-    private List<ProductImage> productImageList;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.MERGE)
+    private List<OrderDetail> orderDetails = new ArrayList<>();
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<ProductPrice> productPrices = new ArrayList<>();
 
-
-    @OneToMany(mappedBy = "product")
-    private List<ProductPrice> productPrices;
-
-    public Product(){
-
+    public Product() {
     }
 
-    public Product( String name, String description, String unit, String manufacturer_name, ProductStatus status, List<ProductImage> productImageList) {
+    public Product(String name, String description, String unit, String manufacturer, ProductStatus status) {
         this.name = name;
         this.description = description;
         this.unit = unit;
-        this.manufacturer_name = manufacturer_name;
+        this.manufacturer = manufacturer;
         this.status = status;
+    }
+
+    public long getProduct_id() {
+        return product_id;
+    }
+
+    public void setProduct_id(long id) {
+        this.product_id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public ProductStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProductStatus status) {
+        this.status = status;
+    }
+
+    public List<ProductImage> getProductImageList() {
+        return productImageList;
+    }
+
+    public void setProductImageList(List<ProductImage> productImageList) {
         this.productImageList = productImageList;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Product)) return false;
-        Product product = (Product) o;
-        return Objects.equals(productId, product.productId);
+    public List<OrderDetail> getOrderDetails() {
+        return orderDetails;
+    }
+
+    public void setOrderDetails(List<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
+    }
+
+    public List<ProductPrice> getProductPrices() {
+        return productPrices;
+    }
+
+    public void setProductPrices(List<ProductPrice> productPrices) {
+        this.productPrices = productPrices;
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(productId);
+    public String toString() {
+        return "Product{" +
+                "id=" + product_id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", unit='" + unit + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", status=" + status +
+                '}';
     }
+
+
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="justify-content: center; align-items: center">
+<h2>List post</h2>
+<form th:action="@{/save}" method="post">
+    <input name="title" placeholder="Title">
+    <input name="summary" placeholder="Summary">
+            <textarea name="postContent" placeholder="Write a post..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+<div style="border: 1px solid black" th:each="post: ${posts}">
+    <p>Title: <span th:text="${post.title}"></span></p>
+    <p>Summary: <span th:text="${post.summary}"></span></p>
+    <p>Published at: <span th:text="${post.publishedAt}"></span></p>
+    <p>Author: <span th:text="${post.author.getFirstName()}"></span></p>
+    <p>Content: <span th:text="${post.content}"></span></p>
+    <br>
+    <p>Comment: <span th:text="${post.getPostComments()}"></span></p>
+    <form method="post" th:action="@{/submit}">
+        <input name="title" placeholder="Title">
+        <textarea name="content" placeholder="Write a comment..."></textarea>
+        <input type="hidden" name="postId" th:value="${post.id}">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

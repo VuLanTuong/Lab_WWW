@@ -1,7 +1,7 @@
 package com.example.week2.services;
 
+import com.example.week2.enums.EmployeeStatus;
 import com.example.week2.models.Employee;
-import com.example.week2.models.EmployeeStatus;
 import com.example.week2.repositories.EmployeeRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Persistence;
@@ -32,7 +32,7 @@ public class EmployeeService {
         Optional<Employee> em = findById(id);
         if(em.isPresent()){
             Employee employee = em.get();
-            employee.setStatus(EmployeeStatus.INACTIVE);
+            employee.setStatus(EmployeeStatus.IN_ACTIVE);
             return true;
         }
         return false;
