@@ -2,10 +2,12 @@ package com.example.week7_vulantuong.models;
 
 import com.example.week7_vulantuong.pks.OrderDetailPK;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Entity
-@Table(name = "order_detail")
+@Table(name = "order_detail") @Setter @Getter
 @IdClass(OrderDetailPK.class)
 public class OrderDetail {
     @Column(name = "quantity", nullable = false)

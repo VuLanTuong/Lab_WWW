@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="UTF-8">
+</head>
+<body>
+<div>
+  <div>
+    <ul style="width: 500px;" >
+      <li th:each="order : ${orders}">
+        <div>
+          <div>
+            <img src="https://i.imgur.com/QRwjbm5.jpg" width="40">
+            <div>
+              <div th:each="orderDetail : ${order.getOrderDetails()}">
+                <span th:text="${orderDetail.getProduct().getName()}"></span>
+                <span  th:text="${orderDetail.getPrice()}"></span>
+                <span  th:text="${orderDetail.getQuantity()}"></span>
+                <span  th:text="${orderDetail.getNote()}"></span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span th:text="${order.getOrderDate()}"></span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

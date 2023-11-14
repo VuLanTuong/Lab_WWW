@@ -1,6 +1,7 @@
 package com.example.week7_vulantuong.services;
 
 import com.example.week7_vulantuong.enums.EmployeeStatus;
+import com.example.week7_vulantuong.models.Customer;
 import com.example.week7_vulantuong.models.Employee;
 import com.example.week7_vulantuong.repositories.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +19,13 @@ public class EmployeeService {
     public void delete(Employee employee){
        employee.setStatus(EmployeeStatus.IN_ACTIVE);
        employeeRepository.save(employee);
+    }
+
+    public Employee findByEmailAndPassword(String email, String password){
+        return employeeRepository.findByEmailAndPassword(email, password);
+    }
+
+    public Employee findById(long id){
+        return employeeRepository.findById(id);
     }
 }

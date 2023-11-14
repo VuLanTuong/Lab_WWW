@@ -2,6 +2,7 @@ package com.example.week7_vulantuong.models;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -10,7 +11,7 @@ import java.util.List;
         @NamedQuery(name = "Customer.getAll",query = "select c from Customer c")
 
 })
-public class Customer {
+public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cust_id")
@@ -26,6 +27,8 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer")
     private List<Order> orderList;
+
+    private String password;
 
     public Customer() {
     }

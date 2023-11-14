@@ -43,6 +43,9 @@ public class Employee {
 //    @JoinColumn
     private List<Order> lstOrder;
 
+
+    private String password;
+
     public Employee() {
     }
 

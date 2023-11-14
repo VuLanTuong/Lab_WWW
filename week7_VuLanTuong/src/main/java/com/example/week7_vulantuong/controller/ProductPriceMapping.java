@@ -18,6 +18,8 @@ public class ProductPriceMapping {
     private ProductStatus status;
     private double price;
 
+    private int quantity;
+
     public ProductPriceMapping() {
     }
 
@@ -87,10 +89,17 @@ public class ProductPriceMapping {
         this.price = price;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public String toString() {
         return "ProductPriceMapping{" +
-                "product_id=" + product_id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", unit='" + unit + '\'' +

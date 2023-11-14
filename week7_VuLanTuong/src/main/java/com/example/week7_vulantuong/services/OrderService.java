@@ -24,5 +24,13 @@ public class OrderService {
     }
 
 
+    public void insert(Order order){
+        orderRepository.save(order);
+    }
+
+    public List<Order> findByCustomerId(long id){
+        return orderRepository.findByCustomer_Id(id);
+    }
+
 
 }

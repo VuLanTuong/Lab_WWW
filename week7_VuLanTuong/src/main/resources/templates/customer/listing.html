@@ -51,6 +51,9 @@
         <th>Manufacturer</th>
         <th>Unit</th>
         <th>Price</th>
+        <th>Quantity</th>
+        <th><a th:href="@{/customer/myCart}">My cart</a></th>
+        <th><a th:href="@{/customer/myOrder}">My order</a></th>
     </tr>
     <tr th:each="productPriceMapping : ${products}">
         <td th:text="${productPriceMapping.getName()}"></td>
@@ -58,7 +61,12 @@
         <td th:text="${productPriceMapping.getManufacturer()}"></td>
         <td th:text="${productPriceMapping.getUnit()}"></td>
         <td th:text="${productPriceMapping.getPrice()}"></td>
-        <td><a th:href="@{/customer/cart(id=${productPriceMapping.product_id})}">Insert to cart</a></td>
+       <td><form method="post" th:action="@{/customer/addToCart}">
+          <input name="quantity" th:value="1">
+           <input type="hidden" name="productId" th:value="${productPriceMapping.getProduct_id()}">
+           <input type="hidden" name="price" th:value="${productPriceMapping.getPrice()}">
+           <button type="submit">Add to cart</button>
+       </form></td>
     </tr>
 </table>
 
