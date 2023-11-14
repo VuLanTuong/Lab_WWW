@@ -25,7 +25,7 @@
 
    
 
-**4. Xem giỏ hàng, xóa sản phẩm trong giỏ hàng**
+**4.MyCart -  Xem giỏ hàng, xóa sản phẩm trong giỏ hàng, checkout**
 
 
    ![image](https://github.com/VuLanTuong/Lab_WWW/assets/96322143/985e67fa-ff37-4bac-8ce0-ab3fc779b588)
@@ -33,7 +33,7 @@
    
 
 
-**5. Sau khi checkout, order sẽ được tạo**
+**5.MyOrder - Sau khi checkout, order sẽ được tạo, xem lại order đã tạo**
 
    
    ![image](https://github.com/VuLanTuong/Lab_WWW/assets/96322143/5c797344-8e0c-403a-912f-75ab4ff9e539)
