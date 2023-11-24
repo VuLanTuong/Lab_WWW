@@ -20,4 +20,8 @@ public class SkillService {
     public Skill findBySkillName(String skillName){
         return skillRepository.findBySkillName(skillName);
     }
+
+    public List<Skill> suggestSkill(long id){
+        return skillRepository.suggestForCandidate(id);
+    }
 }

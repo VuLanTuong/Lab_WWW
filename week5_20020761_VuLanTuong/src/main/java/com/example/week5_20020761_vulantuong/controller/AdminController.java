@@ -4,6 +4,7 @@ import com.example.week5_20020761_vulantuong.models.*;
 import com.example.week5_20020761_vulantuong.services.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -87,19 +88,20 @@ public class AdminController {
     public String getHome(@RequestParam("username") String username,
                           @RequestParam("password") String password,
                           Model model,
-                          RedirectAttributes redirectAttributes){
+                          RedirectAttributes redirectAttributes,
+                          HttpServletRequest request){
 
+        HttpSession session = request.getSession();
         Account account = accountService.findAccooutn(username, password);
 
-
-
         if(account.getCandidate() != null){
+            session.setAttribute("id", account.getCandidate().getCandidateId());
             return "redirect:/listJob";
 
         }
 
-
         Long companyId = account.getCompany().getCompId();
+        session.setAttribute("id", account.getCompany().getCompId());
         redirectAttributes.addAttribute("companyId", companyId);
         return "redirect:/listCandidate";
     }

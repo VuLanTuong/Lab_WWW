@@ -21,4 +21,7 @@ public class CandidateService {
         return candidateRepository.findAll();
     }
 
+  public Candidate findById(long id){
+        return candidateRepository.findByCandidateId(id);
+  }
 }

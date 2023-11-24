@@ -30,5 +30,6 @@ public interface CandidateRepository extends JpaRepository<Candidate,Long> {
 """)
     List<Candidate> suggestCandidateHaveSkill(long companyId);
 
+    public Candidate findByCandidateId(long id);
 
 }

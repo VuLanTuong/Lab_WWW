@@ -38,6 +38,10 @@ public class JobService {
 
     }
 
+    public Job findById(long id){
+        return jobRepository.findByJobId(id);
+    }
+
     public List<Job> findAll(){
         return  jobRepository.findAll();
     }

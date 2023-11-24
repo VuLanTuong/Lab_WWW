@@ -89,7 +89,7 @@
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Find a job</a>
+                    <a class="nav-link" th:href="@{/suggestSkill}">Suggest Skill</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">My profile</a>
@@ -107,15 +107,23 @@
                 <th>Job Name</th>
                 <th>Job Description</th>
                 <th>Company</th>
-                <th>Skill</th>
             </tr>
             <tr th:each="job : ${jobs}">
                 <td th:text="${job.getJobName()}"></td>
                 <td th:text="${job.getJobDescription()}"></td>
                 <td th:text="${job.getCompany().getCompName()}"></td>
-                <td th:text="${job.getSkills()}"></td>
-                <td><a href="/gk4?action=edit">Edit</a> </td>
-                <td><a href="/gk4?action=remove">Remove</a> </td>
+<!--                <td th:text="${job.getSkills()}"></td>-->
+
+                <td><form method="post" th:action="@{/detailJob}">
+
+                    <input type="hidden" name="id" th:value="${job.getJobId()}">
+                    <button type="submit">Detail Job</button>
+                </form></td>
+
+
+
+
+<!--                <td><a href="/gk4?action=remove">Remove</a> </td>-->
             </tr>
         </table>
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Skill name</th>
+    <th>Skill type</th>
+    <th>Skill description</th>
+  </tr>
+  <tr th:each="skill : ${skills}">
+    <td th:text="${skill.skillName}"></td>
+      <td th:text="${skill.getType().name()}"></td>
+      <td th:text="${skill.getSkillDescription()}"></td>
+  </tr>
+</table>
+</body>
+</html>
