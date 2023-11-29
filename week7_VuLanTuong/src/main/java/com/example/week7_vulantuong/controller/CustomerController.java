@@ -111,16 +111,23 @@ public class CustomerController {
 
          List<ProductPrice> prices = new ArrayList<>();
 
-         for(CartDetail cartDetail : cartDetails){
+        double total = 0;
+
+        for(CartDetail cartDetail : cartDetails){
              Product product = cartDetail.getProduct();
              Optional<ProductPrice> price = productPriceService.findPriceByProductId(product.getProduct_id());
 
              if(price.isPresent())
                  prices.add(price.get());
+             total += cartDetail.getQuantity() * cartDetail.getPrice().getPrice();
          }
 
         session.setAttribute("details", cartDetails);
         model.addAttribute("prices", prices);
+        model.addAttribute("total", total);
+
+
+
 
 
         model.addAttribute("details", cartDetails);

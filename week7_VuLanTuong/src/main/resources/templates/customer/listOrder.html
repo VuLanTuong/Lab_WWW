@@ -23,12 +23,13 @@
                 <span class="d-block" th:text="${orderDetail.getProduct().getName()}"></span>
                 <span class="d-block" th:text="'Price: ' + ${orderDetail.getPrice()}"></span>
                 <span class="d-block" th:text="'Quantity: ' + ${orderDetail.getQuantity()}"></span>
+                <span class="d-block" th:text="'Total Price: $' + ${orderDetail.getQuantity() * orderDetail.getPrice()}"></span>
                 <span class="d-block" th:text="${orderDetail.getNote()}"></span>
               </div>
             </div>
           </div>
           <div class="d-flex flex-row align-items-center">
-            <span class="d-block" th:text="${order.getOrderDate()}"></span>
+            <span class="d-block" th:text= "${order.getOrderDate()}"></span>
           </div>
         </div>
       </li>
