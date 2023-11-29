@@ -28,15 +28,14 @@
 **4.MyCart -  Xem giỏ hàng, xóa sản phẩm trong giỏ hàng, checkout**
 
 
-   ![image](https://github.com/VuLanTuong/Lab_WWW/assets/96322143/985e67fa-ff37-4bac-8ce0-ab3fc779b588)
+ ![image](https://github.com/VuLanTuong/Lab_WWW/assets/96322143/c74a8256-32c7-45d4-8f52-cc9e4ed3e55d)
+
 
    
 
 
 **5.MyOrder - Sau khi checkout, order sẽ được tạo, xem lại order đã tạo**
-
-   
-   ![image](https://github.com/VuLanTuong/Lab_WWW/assets/96322143/5c797344-8e0c-403a-912f-75ab4ff9e539)
+![image](https://github.com/VuLanTuong/Lab_WWW/assets/96322143/4c6a109c-e8d7-4d52-ae4c-edf60c5ff4bd)
 
 
 
